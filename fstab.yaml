@@ -1,6 +1,6 @@
 mountpoints:
   /:
-    url: "https://author-p136068-e1367787.adobeaemcloud.com/bin/franklin.delivery/GenxuanHu/aem-boilerplate-commerce/main"
+    url: "https://author-p136068-e1367787.adobeaemcloud.com/bin/franklin.delivery/GenxuanHu/eds-demo/main"
     type: "markup"
     suffix: ".html"
 folders:
