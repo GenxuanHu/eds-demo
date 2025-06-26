@@ -2,7 +2,7 @@
   "public": {
     "default": {
       "commerce-core-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-4.magentosite.cloud/graphql",
-      "commerce-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-4.magentosite.cloud/cs-graphql",
+      "commerce-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-4.magentosite.cloud/graphql",
       "headers": {
         "all": {
           "Store": "default"
