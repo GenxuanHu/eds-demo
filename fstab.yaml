@@ -1,6 +1,6 @@
 mountpoints:
   /:
-    url: "https://author-p144675-e1489163.adobeaemcloud.com/bin/franklin.delivery/GenxuanHu/eds-demo/main"
+    url: "https://author-p152552-e1740441.adobeaemcloud.com/bin/franklin.delivery/GenxuanHu/eds-demo/main"
     type: "markup"
     suffix: ".html"
 folders:
