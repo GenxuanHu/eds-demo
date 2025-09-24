@@ -272,7 +272,7 @@ export default async function decorate(block) {
   /** Search */
   // TODO
   const search = document.createRange().createContextualFragment(`
-  <div class="search-wrapper nav-tools-wrapper">
+  <div class="search-wrapper nav-tools-wrapper gary">
     <button type="button" class="nav-search-button">Search</button>
     <div class="nav-search-input nav-search-panel nav-tools-panel">
       <form action="/search" method="GET">
