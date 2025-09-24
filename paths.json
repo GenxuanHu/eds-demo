@@ -8,6 +8,6 @@
     "/content/eds-demo.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
   ],
   "includes": [
-    "/content/aem-boilerplate-commerce/"
+    "/content/eds-demo/"
   ]
 }
