@@ -398,6 +398,5 @@ export default async function decorate(block) {
     })
   }).catch((error) => {
     console.error('Error fetching recommendations', error);
-    reject(error);
   });
 }
