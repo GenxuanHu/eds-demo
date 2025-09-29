@@ -391,6 +391,11 @@ export default async function decorate(block) {
   console.log("staring commerce header")
   performCatalogServiceQuery(recommendationsQuery, context).then( catalog  => {
     console.log("catalog", catalog);
+    let ul = nav.querySelector(".default-content-wrapper ul:first-child li ul");
+    catalog['categories'].forEach(c => {
+      ul.appendChild(`
+        <li><a href="/apparel" title="Apparel">${c.name}</a></li>`)
+    })
   }).catch((error) => {
     console.error('Error fetching recommendations', error);
     reject(error);
