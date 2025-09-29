@@ -397,7 +397,7 @@ export default async function decorate(block) {
     catalog['categories'].forEach(c => {
 
       let li = document.createRange().createContextualFragment(`
-        <li><a href="/apparel" title="Apparel">${c.name}</a></li>`)
+        <li><a href="/categories?urlpath=${c.urlPath}" title="Apparel">${c.name}</a></li>`)
       ul.appendChild(li);
 
     })
