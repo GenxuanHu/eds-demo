@@ -12,6 +12,27 @@ import { loadFragment } from '../fragment/fragment.js';
 import renderAuthCombine from './renderAuthCombine.js';
 import { renderAuthDropdown } from './renderAuthDropdown.js';
 import { rootLink } from '../../scripts/scripts.js';
+import {performCatalogServiceQuery} from "../../scripts/commerce";
+
+
+
+const recommendationsQuery = `query{
+categories(ids: ["2"], roles: ["show_in_menu", "active"], subtree: {
+    depth: 1,
+    startLevel: 1
+}) {
+    name
+    id
+    level
+    roles
+    path
+    urlPath
+    urlKey
+    parentId
+    children
+    }
+}
+`
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -365,4 +386,13 @@ export default async function decorate(block) {
     () => !isDesktop.matches && toggleMenu(nav, navSections, false),
   );
   renderAuthDropdown(navTools);
+
+
+  console.log("staring commerce header")
+  performCatalogServiceQuery(recommendationsQuery, context).then(({ catalog }) => {
+    console.log("catalog", catalog);
+  }).catch((error) => {
+    console.error('Error fetching recommendations', error);
+    reject(error);
+  });
 }
