@@ -15,7 +15,7 @@ import { rootLink } from '../../scripts/scripts.js';
 import {performCatalogServiceQuery} from "../../scripts/commerce.js";
 
 
-
+const context = {};
 const recommendationsQuery = `query{
 categories(ids: ["2"], roles: ["show_in_menu", "active"], subtree: {
     depth: 1,
