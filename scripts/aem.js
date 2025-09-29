@@ -194,15 +194,22 @@ function toCamelCase(name) {
 // eslint-disable-next-line import/prefer-default-export
 function readBlockConfig(block) {
   const config = {};
-  const currentUrl = window.location.pathname;
+
+  const currentUrl = window.location.search;
+  const params = new URLSearchParams(window.location.search).get('urlpath');
   if(currentUrl.indexOf('categories') > -1){
-    var urls = currentUrl.split('/categories');
-    if(urls.length > 1){
-      let category  = urls[1];
+    // var urls = currentUrl.split('/categories');
+    // if(urls.length > 1){
+    //   let category  = urls[1];
+    //   config['urlpath'] = category;
+    //   config['category']= '4';
+    // }
+    // return config;
+    if(params){
       config['urlpath'] = category;
       config['category']= '4';
+      return config
     }
-    return config;
 
   }
   block.querySelectorAll(':scope > div').forEach((row) => {
