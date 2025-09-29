@@ -195,14 +195,15 @@ function toCamelCase(name) {
 function readBlockConfig(block) {
   const config = {};
   const currentUrl = window.location.pathname;
-  if(currentUrl.indexOf('categories')){
+  if(currentUrl.indexOf('categories') > -1){
     var urls = currentUrl.split('/categories');
     if(urls.length > 1){
       let category  = urls[1];
-      config[name] = category;
-      let value = '';
-      return config;
+      config['urlpath'] = category;
+      config['category']= '4';
     }
+    return config;
+
   }
   block.querySelectorAll(':scope > div').forEach((row) => {
     if (row.children) {
