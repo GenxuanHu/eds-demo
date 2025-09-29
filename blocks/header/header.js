@@ -389,7 +389,7 @@ export default async function decorate(block) {
 
 
   console.log("staring commerce header")
-  performCatalogServiceQuery(recommendationsQuery, context).then(({ catalog }) => {
+  performCatalogServiceQuery(recommendationsQuery, context).then( catalog  => {
     console.log("catalog", catalog);
   }).catch((error) => {
     console.error('Error fetching recommendations', error);
