@@ -196,7 +196,7 @@ function readBlockConfig(block) {
   const config = {};
 
   const currentUrl = window.location.pathname;
-  const params = new URLSearchParams(window.location.search).get('urlpath');
+  const category = new URLSearchParams(window.location.search).get('urlpath');
   if(currentUrl.indexOf('categories') > -1){
     // var urls = currentUrl.split('/categories');
     // if(urls.length > 1){
@@ -205,7 +205,7 @@ function readBlockConfig(block) {
     //   config['category']= '4';
     // }
     // return config;
-    if(params){
+    if(category){
       config['urlpath'] = category;
       config['category']= '4';
       return config
