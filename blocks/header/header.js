@@ -393,10 +393,12 @@ export default async function decorate(block) {
   console.log("staring commerce header")
   performCatalogServiceQueryHeader(recommendationsQuery, context,header).then( catalog  => {
     console.log("catalog", catalog);
-    const firstNav =  nav.querySelector(".default-content-wrapper ul:first-child li");
+    const firstNav =  nav.querySelector(".default-content-wrapper>ul:first-child li");
 
     if(firstNav.querySelector("ul").length  == 0 ){
-      firstNav.querySelector(document.createRange().createContextualFragment(`<ul></ul>`));
+      firstNav.querySelector(document.createRange().createContextualFragment(`<div class="submenu-wrapper"><div class="submenu-header"><h5 class="back-link">All Categories</h5><hr></div><h6 class="submenu-title">Categories 
+  </h6><ul>
+  </ul></div>`));
     }
     let ul =firstNav.querySelector("ul")
 
