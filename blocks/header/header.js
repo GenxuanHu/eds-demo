@@ -393,8 +393,11 @@ export default async function decorate(block) {
     console.log("catalog", catalog);
     let ul = nav.querySelector(".default-content-wrapper ul:first-child li ul");
     catalog['categories'].forEach(c => {
-      ul.appendChild(`
+
+      let li = document.createRange().createContextualFragment(`
         <li><a href="/apparel" title="Apparel">${c.name}</a></li>`)
+      ul.appendChild(li);
+
     })
   }).catch((error) => {
     console.error('Error fetching recommendations', error);
