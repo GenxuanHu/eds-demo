@@ -132,7 +132,9 @@ export async function performCatalogServiceQueryHeader(query, variables, headerV
 
   if(headerVar) {
     for (let attr in headerVar) {
-      if (headerVar.hasOwnProperty(attr)) headers[attr] = headerVar[attr];
+
+        headers[attr] = headerVar[attr];
+
     }
   }
 
