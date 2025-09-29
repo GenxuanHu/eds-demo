@@ -12,7 +12,7 @@ import { loadFragment } from '../fragment/fragment.js';
 import renderAuthCombine from './renderAuthCombine.js';
 import { renderAuthDropdown } from './renderAuthDropdown.js';
 import { rootLink } from '../../scripts/scripts.js';
-import {performCatalogServiceQuery} from "../../scripts/commerce";
+import {performCatalogServiceQuery} from "../../scripts/commerce.js";
 
 
 
