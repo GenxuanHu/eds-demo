@@ -393,8 +393,14 @@ export default async function decorate(block) {
   console.log("staring commerce header")
   performCatalogServiceQueryHeader(recommendationsQuery, context,header).then( catalog  => {
     console.log("catalog", catalog);
-    let ul = nav.querySelector(".default-content-wrapper ul:first-child li ul");
-    catalog['categories'].forEach(c => {
+    const firstNav =  nav.querySelector(".default-content-wrapper ul:first-child li");
+
+    if(firstNav.querySelector("ul").length  == 0 ){
+      firstNav.querySelector(document.createRange().createContextualFragment(`<ul></ul>`));
+    }
+    let ul =firstNav.querySelector("ul")
+
+      catalog['categories'].forEach(c => {
 
       let li = document.createRange().createContextualFragment(`
         <li><a href="/categories?urlpath=${c.urlPath}" title="Apparel">${c.name}</a></li>`)
