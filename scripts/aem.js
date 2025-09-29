@@ -195,7 +195,7 @@ function toCamelCase(name) {
 function readBlockConfig(block) {
   const config = {};
 
-  const currentUrl = window.location.search;
+  const currentUrl = window.location.pathname;
   const params = new URLSearchParams(window.location.search).get('urlpath');
   if(currentUrl.indexOf('categories') > -1){
     // var urls = currentUrl.split('/categories');
