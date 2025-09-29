@@ -120,10 +120,21 @@ export async function commerceEndpointWithQueryParams() {
 /* Common functionality */
 
 export async function performCatalogServiceQuery(query, variables) {
+  return performCatalogServiceQueryHeader(query, variables, null);
+}
+
+
+export async function performCatalogServiceQueryHeader(query, variables, headerVar) {
   const headers = {
     ...(getHeaders('cs')),
     'Content-Type': 'application/json',
   };
+
+  if(headerVar) {
+    for (let attr in headerVar) {
+      if (headerVar.hasOwnProperty(attr)) headers[attr] = headerVar[attr];
+    }
+  }
 
   const apiCall = await commerceEndpointWithQueryParams();
   apiCall.searchParams.append('query', query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, ' ')

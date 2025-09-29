@@ -8,12 +8,12 @@ import { publishShoppingCartViewEvent } from '@dropins/storefront-cart/api.js';
 
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-
 import renderAuthCombine from './renderAuthCombine.js';
 import { renderAuthDropdown } from './renderAuthDropdown.js';
 import { rootLink } from '../../scripts/scripts.js';
-import {performCatalogServiceQuery} from "../../scripts/commerce.js";
+import {performCatalogServiceQuery, performCatalogServiceQueryHeader} from "../../scripts/commerce.js";
 
+import { checkIsAuthenticated } from '../../scripts/configs.js';
 
 const context = {};
 const recommendationsQuery = `query{
@@ -386,10 +386,12 @@ export default async function decorate(block) {
     () => !isDesktop.matches && toggleMenu(nav, navSections, false),
   );
   renderAuthDropdown(navTools);
-
-
+  let header={}
+  if(checkIsAuthenticated()){
+      header['Magento-Customer-Group'] ='356a192b7913b04c54574d18c28d46e6395428ab'
+  }
   console.log("staring commerce header")
-  performCatalogServiceQuery(recommendationsQuery, context).then( catalog  => {
+  performCatalogServiceQueryHeader(recommendationsQuery, context,header).then( catalog  => {
     console.log("catalog", catalog);
     let ul = nav.querySelector(".default-content-wrapper ul:first-child li ul");
     catalog['categories'].forEach(c => {

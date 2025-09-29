@@ -194,6 +194,16 @@ function toCamelCase(name) {
 // eslint-disable-next-line import/prefer-default-export
 function readBlockConfig(block) {
   const config = {};
+  const currentUrl = window.location.pathname;
+  if(currentUrl.indexOf('categories')){
+    var urls = currentUrl.split('/categories');
+    if(urls.length > 1){
+      let category  = urls[1];
+      config[name] = category;
+      let value = '';
+      return config;
+    }
+  }
   block.querySelectorAll(':scope > div').forEach((row) => {
     if (row.children) {
       const cols = [...row.children];
