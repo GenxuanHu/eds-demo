@@ -35,7 +35,7 @@
     }
   },
   "us-en": {
-    "commerce-core-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-4.magentosite.cloud/graphql",
+    "commerce-core-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-5.magentosite.cloud/graphql",
     "commerce-endpoint": "https://catalog-service.adobe.io/graphql",
     "headers": {
       "all": {
@@ -46,8 +46,8 @@
         "Magento-Store-Code": "main_website_store",
         "Magento-Store-View-Code": "default",
         "Magento-Website-Code": "base",
-        "x-api-key": "a3e46e4c394947dfaa6479b7f8fadf7a",
-        "Magento-Environment-Id": "c5e0cf7b-75c6-4107-b35e-83c40effeee2"
+        "x-api-key": "a3e46e34c33525dfaa6479b7f8fad3222",
+        "Magento-Environment-Id": "c5e0cf7b-75c6-4107-b35e-83c4322deeffe32"
       }
     },
     "analytics": {
