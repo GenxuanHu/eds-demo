@@ -1,0 +1,70 @@
+{
+  "public": {
+    "zh-tw": {
+      "commerce-core-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-4.magentosite.cloud/graphql",
+      "commerce-endpoint": "https://catalog-service.adobe.io/graphql",
+      "headers": {
+        "all": {
+          "Store": "default"
+        },
+        "cs": {
+          "Magento-Customer-Group": "General",
+          "Magento-Store-Code": "main_website_store",
+          "Magento-Store-View-Code": "default",
+          "Magento-Website-Code": "base",
+          "x-api-key": "a3e46e4c394947dfaa6479b7f8fadf7a",
+          "Magento-Environment-Id": "c5e0cf7b-75c6-4107-b35e-83c40effeee2"
+        }
+      },
+      "analytics": {
+        "base-currency-code": "USD",
+        "environment": "Production",
+        "store-id": 1,
+        "store-name": "Main Website Store",
+        "store-url": "https://www.aemshop.net",
+        "store-view-id": 1,
+        "store-view-name": "Default Store View",
+        "website-id": 1,
+        "website-name": "Main Website"
+      },
+      "plugins": {
+        "picker": {
+          "rootCategory": "2"
+        }
+      }
+    }
+  },
+  "us-en": {
+    "commerce-core-endpoint": "https://master-7rqtwti-ybm5ax4ckrmgi.ap-4.magentosite.cloud/graphql",
+    "commerce-endpoint": "https://catalog-service.adobe.io/graphql",
+    "headers": {
+      "all": {
+        "Store": "default"
+      },
+      "cs": {
+        "Magento-Customer-Group": "General",
+        "Magento-Store-Code": "main_website_store",
+        "Magento-Store-View-Code": "default",
+        "Magento-Website-Code": "base",
+        "x-api-key": "a3e46e4c394947dfaa6479b7f8fadf7a",
+        "Magento-Environment-Id": "c5e0cf7b-75c6-4107-b35e-83c40effeee2"
+      }
+    },
+    "analytics": {
+      "base-currency-code": "USD",
+      "environment": "Production",
+      "store-id": 1,
+      "store-name": "Acer Us Website Store",
+      "store-url": "https://www.aemshop.net",
+      "store-view-id": 1,
+      "store-view-name": "Default Store View",
+      "website-id": 1,
+      "website-name": "Main Website"
+    },
+    "plugins": {
+      "picker": {
+        "rootCategory": "2"
+      }
+    }
+  }
+}
